@@ -1,0 +1,389 @@
+.section {
+  padding-top: 100px;
+  padding-bottom: 40px;
+  @media screen and (min-width: 768px) {
+    padding-top: 65px;
+    padding-bottom: 60px;
+  }
+  @include desktop {
+    padding-top: 80px;
+  }
+}
+.gallery__section {
+  position: relative;
+}
+.filter__wrap {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.filter {
+  padding: 15px 0;
+  text-align: center;
+  @include tablet {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 768px;
+    padding: 25px 0;
+  }
+  @include desktop {
+    padding-top: 75px;
+    padding: 30px 0;
+  }
+}
+.filter__text {
+  margin-bottom: 10px;
+  color: var(--filter-text);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.14;
+  text-align: center;
+  // border-bottom: 2px solid;
+  border-color: var(--accent-text-color);
+  @include tablet {
+    padding-top: 2px;
+    margin-bottom: 0;
+    margin-right: 30px;
+    font-size: 16px;
+    line-height: 1.17;
+  }
+  @include desktop {
+    padding-top: 3px;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+.filter__list {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  @include tablet {
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
+}
+.filter__item:not(:last-child) {
+  margin-right: 15px;
+  @include tablet {
+    margin-right: 30px;
+  }
+  @include desktop {
+    margin-right: 45px;
+  }
+}
+
+.filter__select {
+  padding-left: 5px;
+  cursor: pointer;
+  appearance: none;
+  color: var(--filter-text);
+  background-color: var(--main-bg);
+  transition: all 0.3s;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.14;
+  border: none;
+  border-bottom: 2px solid;
+  border-color: var(--accent-text-color);
+  outline: none;
+  transform: scale(1);
+  @include tablet {
+    font-size: 16px;
+    line-height: 1.17;
+  }
+  @include desktop {
+    font-size: 20px;
+    line-height: 1.1;
+  }
+  &.year {
+    width: 90px;
+  }
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  &:hover {
+      color: var(--accent-text-color);
+      border-color: var(--filter-text);
+      @include tablet {
+        transform: scale(1.1);
+      }
+  }
+}
+.filter__select option {
+  color: var(--filter-text);
+}
+.filter__button {
+  margin-left: 5px;
+  width: 50px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--activ-btn-color);
+  color: var(--white-colore);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.14;
+  transform: scale(1);
+  transition: 0.3s;
+  @include tablet {
+    margin-left: 0px;
+    width: 65px;
+    height: 25px;
+    font-size: 16px;
+    line-height: 1.17;
+  }
+  @include desktop {
+    width: 70px;
+    height: 30px;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  &:hover {
+    @include tablet {
+    transform: scale(1.1);
+  }
+} 
+ }
+.gallery {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: -32px;
+    margin-right: -16px;
+    margin-left: -16px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-right: -8px;
+    margin-left: -8px;
+  }
+}
+
+.card {
+  margin-bottom: 20px;
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 64px) / 2);
+    margin-bottom: 32px;
+    margin-right: 16px;
+    margin-left: 16px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: calc((100% - 48px) / 3);
+    margin-bottom: 32px;
+    margin-right: 8px;
+    margin-left: 8px;
+  }
+  cursor: pointer;
+}
+
+.card:last-child {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 0px;
+  }
+}
+
+.gallery__item {
+  height: 100%;
+  padding: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transition-property: transform, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: linear;
+}
+
+.gallery__item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 26px var(--shadow-color);
+}
+
+.card__image {
+  background-color: var(--main-bg);
+  transition: 0.3s;
+  pointer-events: none;
+  border-radius: 5px;
+  height: 402px;
+  @media screen and (min-width: 768px) {
+    height: 455px;
+  }
+  @media screen and (min-width: 1280px) {
+    height: 574px;
+  }
+}
+
+.card__info {
+  margin-top: 8px;
+  pointer-events: none;
+  @media screen and (min-width: 1280px) {
+    margin-top: 12px;
+  }
+}
+
+.card__title {
+  @include font($fs: 12px, $fw: 500, $lh: 1.16);
+  font-family: 'Roboto';
+  text-transform: uppercase;
+  margin: 0;
+  color: var(--primery-text-color);
+  @media screen and (min-width: 768px) {
+    @include font($lh: 1.33);
+  }
+  @media screen and (min-width: 1280px) {
+    @include font($fs: 20px, $fw: 500, $lh: 1.2);
+  }
+  margin-bottom: 0;
+}
+
+.card__movie-info {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.card__release,
+.card__genre,
+.vertical {
+  margin-bottom: 0;
+  @include font($fs: 12px, $fw: 500, $lh: 1.33);
+  font-family: 'Roboto';
+  color: var(--accent-text-color);
+  @media screen and (min-width: 1280px) {
+    @include font($fs: 20px, $fw: 500, $lh: 1.2);
+  }
+}
+
+.card__rating {
+  margin-bottom: 0;
+  width: 36px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  border-radius: 5px;
+  color: var(--white-colore);
+  background-color: var(--activ-btn-color);
+  @include font($fs: 12px, $fw: 500, $lh: 1.16);
+  @media screen and (min-width: 1280px) {
+    width: 40px;
+    height: 20px;
+  }
+}
+
+// Пагинация
+
+.pagination {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media screen and (min-width: 768px) {
+    margin-top: 60px;
+  }
+}
+.pagination__arrow {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  // padding: 12px;
+  background: var(--pagination-bg);
+  border-radius: 5px;
+  border: none;
+  color: var(--primery-text-color);
+  transition-property: color;
+  transition-duration: 150ms;
+  transition-timing-function: linear;
+}
+
+.pagination-arrow-icon {
+  fill: var(--primery-text-color);
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  pointer-events: none;
+  color: currentColor;
+  fill: currentColor;
+}
+
+.pagination__arrow:hover {
+  color: var(--accent-text-color);
+}
+
+.pagination-list {
+  display: flex;
+  align-items: center;
+}
+
+.pagination__btn {
+  @include font($fs: 12px, $fw: 500, $lh: 1.33);
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--main-bg);
+  color: var(--primery-text-color);
+}
+
+.pagination__btn:hover {
+  color: var(--accent-text-color);
+}
+
+.pagination__btn--choice {
+  background-color: var(--activ-btn-color);
+  color: var(--white-colore);
+  cursor: default;
+}
+
+.pagination__btn--choice:hover {
+  color: var(--white-colore);
+}
+
+.pagination-btn-more {
+  width: 40px;
+  height: 40px;
+  // display: none;
+  cursor: default;
+  @media (min-width: 768px) {
+    display: block;
+    @include font($fs: 12px, $fw: 500, $lh: 1.33);
+    letter-spacing: 0em;
+    background-color: var(--main-bg);
+    color: var(--primery-text-color);
+    border: none;
+    padding: 0 0 6px 0;
+  }
+}
+
+#scrollToTopBtn {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--accent-text-color);
+    border-radius: 50%;
+    border: none;
+    font-size: 18px;
+    width: 35px;
+    height: 35px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 25px;
+    width: 40px;
+    height: 40px;
+    right: 30px;
+  }
+}

@@ -1,0 +1,32 @@
+:root {
+  --main-bg: #ffffff;
+  --primery-text-color: #000000;
+  --accent-text-color: #ff6b08;
+  --shadow-color: #141414;
+  --white-colore: #ffffff;
+  --activ-btn-color: #ff6b01;
+  --filter-bg: #f7f7f7;
+  --filter-text: #545454;
+  --pagination-bg: #f1ebe1;
+  --pagination-btn: #ffffff;
+  --button-bg: #fffff;
+  --footer-bg: #f7f7f7;
+  --backdrop-mod: rgba(0, 0, 0, 0.4);
+  --modal-info-key: #8c8c8c;
+  --modal-title-text: #161616;
+}
+
+:root[data-theme='dark'] {
+--main-bg: #3d4246;
+--primery-text-color: #ffffff;
+--shadow-color: #e4e4e4;
+--filter-bg: #545454;
+--filter-text: #f7f7f7;
+--pagination-bg: #4c4c4c;
+--pagination-btn: #3e3939;
+--button-bg: #000000;
+--footer-bg: #161616;
+--backdrop-mod: rgba(250, 250, 250, 0.4);
+--modal-info-key: #e4e4e4;
+--modal-title-text: #e6e6e6;
+}

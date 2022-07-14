@@ -1,0 +1,18 @@
+@import './utils/modern-normalize';
+@import './utils/variables';
+@import './utils/mixins';
+@import './utils/base-styles';
+@import './utils/is-hidden';
+@import './utils/visually-hidden';
+
+@import './components/card-modal';
+@import './components/team-madal';
+@import './components/container';
+@import './components/spiner';
+@import './components/scrollBtn';
+
+@import './layout/header';
+@import './layout/gallery';
+@import './layout/footer';
+
+@import './components/theme';
