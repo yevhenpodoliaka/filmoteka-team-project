@@ -1,5 +1,5 @@
 const BASE_URL = 'https://api.themoviedb.org/3';
-const KEY = '81f57ce8a5863d84fdab7c29ba0c37c2';
+const KEY = 'b6201d5209ec246f483ea16253167a90';
 
 export default class ApiService {
   constructor() {
